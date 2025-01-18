@@ -37,9 +37,14 @@ const createContact = async (req, res) => {
     name: req.body.name,
     email: req.body.email,
     phone: req.body.phone,
+    favColor: req.body.favColor,
     address: req.body.address,
     tags: req.body.tags,
   };
+  // Check that all fields are present
+  if (!contact.name || !contact.email || !contact.phone || !contact.favColor || !contact.address || !contact.tags) {
+    return res.status(400).json({ message: "Missing required fields" });
+  }
 
   db.collection("Contacts")
     .insertOne(contact)
@@ -57,10 +62,13 @@ const updateContact = async (req, res) => {
     name: req.body.name,
     email: req.body.email,
     phone: req.body.phone,
+    favColor: req.body.favColor,
     address: req.body.address,
     tags: req.body.tags,
   };
-
+  if (!contact.name || !contact.email || !contact.phone || !contact.favColor || !contact.address || !contact.tags) {
+    return res.status(400).json({ message: "Missing required fields" });
+  }
   db.collection("Contacts")
     .updateOne(
       { _id: new objectId(req.params.id) },

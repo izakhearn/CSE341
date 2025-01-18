@@ -11,7 +11,8 @@ Content-Type: application/json
 {
     "name": "John Doe",
     "email": "john.doe@gmail.com",
-    "phone": "1234567890",  
+    "phone": "1234567890",
+    "favColor": "blue",
     "address": {
         "street": "123 Elm Street",
         "city": "Springfield",
@@ -29,9 +30,10 @@ PUT http://localhost:3000/contacts/678c22be220951a7fb986cee
 Content-Type: application/json
 
 {
-    "name": "John Doe",
-    "email": "john2doe@gmail.com",
+    "name": "John Danner Doe",
+    "email": "john.doe2@gmail.com",
     "phone": "1234567890",
+    "favColor": "yellow",
     "address": {
         "street": "123 Elm Street",
         "city": "Springfield",
@@ -39,7 +41,8 @@ Content-Type: application/json
         "zip": "62704"
     },
     "tags": [
-    "friend"
+    "friend",
+    "work"
     ]
 }
 
