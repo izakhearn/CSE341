@@ -30,8 +30,68 @@ const getOneContact = async (req, res) => {
         }
 };
 
+const createContact = async (req, res) => {
+  const db = mongodb.getDb();
+  console.log(req.body);
+  const contact = {
+    name: req.body.name,
+    email: req.body.email,
+    phone: req.body.phone,
+    address: req.body.address,
+    tags: req.body.tags,
+  };
+
+  db.collection("Contacts")
+    .insertOne(contact)
+    .then((result) => {
+      res.status(201).json({ id: result.insertedId, message: "Contact created" });
+    })
+    .catch((err) => {
+      res.status(500).json({ message: "Error creating contact", error: err });
+    });
+};
+
+const updateContact = async (req, res) => {
+  const db = mongodb.getDb();
+  const contact = {
+    name: req.body.name,
+    email: req.body.email,
+    phone: req.body.phone,
+    address: req.body.address,
+    tags: req.body.tags,
+  };
+
+  db.collection("Contacts")
+    .updateOne(
+      { _id: new objectId(req.params.id) },
+      { $set: contact }
+    )
+    .then((result) => {
+      res.status(200).json({ message: "Contact updated" });
+    })
+    .catch((err) => {
+      res.status(500).json({ message: "Error updating contact", error: err });
+    });
+};
+
+const deleteContact = async (req, res) => {
+  const db = mongodb.getDb();
+  db.collection("Contacts")
+    .deleteOne({ _id: new objectId(req.params.id) })
+    .then((result) => {
+      res.status(200).json({ message: "Contact deleted" });
+    })
+    .catch((err) => {
+      res.status(500).json({ message: "Error deleting contact", error: err });
+    });
+};
+
+
 module.exports = {
     getAllContacts,
     getOneContact,
+    createContact,
+    updateContact,
+    deleteContact
     };
 

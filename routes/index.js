@@ -7,6 +7,7 @@ router.get('/', (req, res) => {
 );
 
 router.use('/contacts', require('./contacts'));
+router.use('/api-docs', require('./swagger'));
 
 
 

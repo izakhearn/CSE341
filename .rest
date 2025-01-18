@@ -2,4 +2,46 @@
 GET http://localhost:3000/contacts
 
 ### Get contact by id endpoint
-GET http://localhost:3000/contacts/67824ece155fc788e3fa4c4f
+GET http://localhost:3000/contacts/678c22be220951a7fb986cee
+
+### Create contact endpoint
+POST http://localhost:3000/contacts
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "john.doe@gmail.com",
+    "phone": "1234567890",  
+    "address": {
+        "street": "123 Elm Street",
+        "city": "Springfield",
+        "state": "IL",
+        "zip": "62704"
+    },
+    "tags": [
+    "friend",
+    "work"
+    ]
+}
+
+### Update contact endpoint
+PUT http://localhost:3000/contacts/678c22be220951a7fb986cee
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "john2doe@gmail.com",
+    "phone": "1234567890",
+    "address": {
+        "street": "123 Elm Street",
+        "city": "Springfield",
+        "state": "IL",
+        "zip": "62704"
+    },
+    "tags": [
+    "friend"
+    ]
+}
+
+### Delete contact endpoint
+DELETE http://localhost:3000/contacts/678c22be220951a7fb986cee
