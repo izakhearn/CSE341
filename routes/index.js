@@ -1,12 +1,8 @@
 const router = require('express').Router();
 
 
-router.get('/', (req, res) => {
-    res.send('Hello, world!');
-}
-);
-
-router.use('/contacts', require('./contacts'));
+router.use('/friends', require('./friends'));
+router.use('/bdaylist', require('./bdaylist'));
 router.use('/api-docs', require('./swagger'));
 
 

@@ -1,0 +1,122 @@
+[
+  {
+    "friendId": "ObjectId1",
+    "category": "Electronics",
+    "itemName": "Wireless Earbuds",
+    "cost": 59.99
+  },
+  {
+    "friendId": "ObjectId1",
+    "category": "Books",
+    "itemName": "Mystery Novel",
+    "cost": 14.99
+  },
+  {
+    "friendId": "ObjectId2",
+    "category": "Clothing",
+    "itemName": "Casual Jacket",
+    "cost": 49.99
+  },
+  {
+    "friendId": "ObjectId2",
+    "category": "Accessories",
+    "itemName": "Leather Wallet",
+    "cost": 39.99
+  },
+  {
+    "friendId": "ObjectId3",
+    "category": "Home Decor",
+    "itemName": "Table Lamp",
+    "cost": 34.99
+  },
+  {
+    "friendId": "ObjectId3",
+    "category": "Kitchen",
+    "itemName": "Knife Set",
+    "cost": 79.99
+  },
+  {
+    "friendId": "ObjectId4",
+    "category": "Fitness",
+    "itemName": "Yoga Mat",
+    "cost": 24.99
+  },
+  {
+    "friendId": "ObjectId4",
+    "category": "Electronics",
+    "itemName": "Fitness Tracker",
+    "cost": 99.99
+  },
+  {
+    "friendId": "ObjectId5",
+    "category": "Toys",
+    "itemName": "Board Game",
+    "cost": 29.99
+  },
+  {
+    "friendId": "ObjectId5",
+    "category": "Outdoor",
+    "itemName": "Camping Chair",
+    "cost": 49.99
+  },
+  {
+    "friendId": "ObjectId6",
+    "category": "Health",
+    "itemName": "Essential Oil Set",
+    "cost": 19.99
+  },
+  {
+    "friendId": "ObjectId6",
+    "category": "Beauty",
+    "itemName": "Skincare Kit",
+    "cost": 59.99
+  },
+  {
+    "friendId": "ObjectId7",
+    "category": "Gadgets",
+    "itemName": "Portable Charger",
+    "cost": 29.99
+  },
+  {
+    "friendId": "ObjectId7",
+    "category": "Stationery",
+    "itemName": "Notebook Set",
+    "cost": 14.99
+  },
+  {
+    "friendId": "ObjectId8",
+    "category": "Pet Supplies",
+    "itemName": "Pet Bed",
+    "cost": 39.99
+  },
+  {
+    "friendId": "ObjectId8",
+    "category": "Toys",
+    "itemName": "Chew Toy",
+    "cost": 12.99
+  },
+  {
+    "friendId": "ObjectId9",
+    "category": "Gaming",
+    "itemName": "Video Game",
+    "cost": 59.99
+  },
+  {
+    "friendId": "ObjectId9",
+    "category": "Furniture",
+    "itemName": "Office Chair",
+    "cost": 119.99
+  },
+  {
+    "friendId": "ObjectId10",
+    "category": "Travel",
+    "itemName": "Travel Backpack",
+    "cost": 89.99
+  },
+  {
+    "friendId": "ObjectId10",
+    "category": "Luggage",
+    "itemName": "Carry-On Suitcase",
+    "cost": 149.99
+  }
+]

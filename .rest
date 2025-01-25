@@ -1,50 +1,62 @@
-### Get All contacts endpoint 
-GET http://localhost:3000/contacts
+### Get All Friends endpoint 
+GET http://localhost:3000/Friends
 
-### Get contact by id endpoint
-GET http://localhost:3000/contacts/678c22be220951a7fb986cee
+### Get Friend by id endpoint
+GET http://localhost:3000/Friends/678c22be220951a7fb986cee
 
-### Create contact endpoint
-POST http://localhost:3000/contacts
+### Create Friend endpoint
+POST http://localhost:3000/Friends
 Content-Type: application/json
 
 {
     "name": "John Doe",
     "email": "john.doe@gmail.com",
     "phone": "1234567890",
-    "favColor": "blue",
-    "address": {
-        "street": "123 Elm Street",
-        "city": "Springfield",
-        "state": "IL",
-        "zip": "62704"
-    },
-    "tags": [
-    "friend",
-    "work"
-    ]
+    "bday": "1990-01-01"
+
 }
 
-### Update contact endpoint
-PUT http://localhost:3000/contacts/678c22be220951a7fb986cee
+### Update Friend endpoint
+PUT http://localhost:3000/Friends/678c22be220951a7fb986cee
 Content-Type: application/json
 
 {
     "name": "John Danner Doe",
     "email": "john.doe2@gmail.com",
     "phone": "1234567890",
-    "favColor": "yellow",
-    "address": {
-        "street": "123 Elm Street",
-        "city": "Springfield",
-        "state": "IL",
-        "zip": "62704"
-    },
-    "tags": [
-    "friend",
-    "work"
-    ]
+    "bday": "1990-01-01"
 }
 
-### Delete contact endpoint
-DELETE http://localhost:3000/contacts/678c22be220951a7fb986cee
+### Delete Friend endpoint
+DELETE http://localhost:3000/Friends/678c22be220951a7fb986cee
+
+###Create Bdaylist Item endpoint
+GET http://localhost:3000/Bdaylist
+
+###Create Bdaylist Item endpoint
+POST http://localhost:3000/Bdaylist
+Content-Type: application/json
+
+  {
+    "friendId": "ObjectId10",
+    "category": "Luggage",
+    "itemName": "Carry-On Suitcase",
+    "cost": 149.99
+  }
+]
+
+###Update Bdaylist Item endpoint
+PUT http://localhost:3000/Bdaylist/678c22be220951a7fb986cee
+Content-Type: application/json
+
+  {
+    "friendId": "ObjectId10",
+    "category": "Luggage",
+    "itemName": "Carry-On 2 Suitcase",
+    "cost": 149.99
+  }
+
+
+###Delete Bdaylist Item endpoint
+DELETE http://localhost:3000/Bdaylist/678c22be220951a7fb986cee
+

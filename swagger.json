@@ -11,17 +11,7 @@
     "https"
   ],
   "paths": {
-    "/": {
-      "get": {
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/contacts/": {
+    "/friends/": {
       "get": {
         "description": "",
         "produces": [
@@ -54,13 +44,7 @@
                 "phone": {
                   "example": "any"
                 },
-                "favColor": {
-                  "example": "any"
-                },
-                "address": {
-                  "example": "any"
-                },
-                "tags": {
+                "bday": {
                   "example": "any"
                 }
               }
@@ -71,8 +55,8 @@
           "201": {
             "description": "Created"
           },
-          "400": {
-            "description": "Bad Request"
+          "412": {
+            "description": "Precondition Failed"
           },
           "500": {
             "description": "Internal Server Error"
@@ -80,7 +64,7 @@
         }
       }
     },
-    "/contacts/{id}": {
+    "/friends/{id}": {
       "get": {
         "description": "",
         "produces": [
@@ -127,13 +111,7 @@
                 "phone": {
                   "example": "any"
                 },
-                "favColor": {
-                  "example": "any"
-                },
-                "address": {
-                  "example": "any"
-                },
-                "tags": {
+                "bday": {
                   "example": "any"
                 }
               }
@@ -144,8 +122,147 @@
           "200": {
             "description": "OK"
           },
-          "400": {
-            "description": "Bad Request"
+          "412": {
+            "description": "Precondition Failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/bdaylist/": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "friendId": {
+                  "example": "any"
+                },
+                "category": {
+                  "example": "any"
+                },
+                "itemName": {
+                  "example": "any"
+                },
+                "cost": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "412": {
+            "description": "Precondition Failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/bdaylist/{id}": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "friendId": {
+                  "example": "any"
+                },
+                "category": {
+                  "example": "any"
+                },
+                "itemName": {
+                  "example": "any"
+                },
+                "cost": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "412": {
+            "description": "Precondition Failed"
           },
           "500": {
             "description": "Internal Server Error"
