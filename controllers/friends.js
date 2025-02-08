@@ -36,6 +36,9 @@ const createFriend = async (req, res) => {
     email: req.body.email,
     phone: req.body.phone,
     bday: req.body.bday,
+    address: req.body.address,
+    dateCreated: new Date().toISOString(),
+    dateUpdated: new Date().toISOString(),
   };
 
   db.collection("Friends")
@@ -55,6 +58,8 @@ const updateFriend = async (req, res) => {
     email: req.body.email,
     phone: req.body.phone,
     bday: req.body.bday,
+    address: req.body.address,
+    dateUpdated: new Date().toISOString(),
   };
   db.collection("Friends")
     .updateOne({ _id: new objectId(req.params.id) }, { $set: Friend })
